@@ -1,0 +1,263 @@
+body {
+  background-color: rgba(0, 0, 0, 0.899) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: bisque !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+}
+
+/* Games pages begin */
+
+.main-heading {
+  font-size: 750%;
+  cursor: default;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+.game-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card-compo {
+  border: 5px solid black;
+  background-color: bisque;
+  padding: 2%;
+  text-align: justify;
+  cursor: default;
+}
+
+.play-button {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: inline;
+  padding: 5%;
+  border-radius: 5px;
+}
+
+.ant-card-meta-description {
+  margin-bottom: 15%;
+}
+
+.link-remove {
+  text-decoration: none;
+  color: bisque;
+}
+
+.link-remove:hover {
+  color: rgb(255, 189, 108);
+}
+
+.back-button {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-size: 3em;
+}
+/* Games pages end */
+
+/* Tic-Tac-Toe begin */
+.heading {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 350%;
+  cursor: default;
+  margin-bottom: 20% !important;
+}
+
+.cell {
+  color: rgba(255, 255, 255, 0.83);
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  position: relative;
+}
+
+.right-border {
+  border-right: 0.15em solid bisque;
+}
+
+.bottom-border {
+  border-bottom: 0.15em solid bisque;
+}
+
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.1;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.1;
+}
+
+.strike {
+  position: absolute;
+  background-color: rgb(237, 132, 4);
+  transition: all 0.5s ease;
+}
+
+.strike-row-1,
+.strike-row-2,
+.strike-row-3 {
+  width: 0;
+  height: 4px;
+}
+
+.strike-row-1 {
+  top: 15%;
+}
+
+.strike-row-2 {
+  top: 48%;
+}
+
+.strike-row-3 {
+  top: 83%;
+}
+
+.strike-column-1,
+.strike-column-2,
+.strike-column-3 {
+  width: 4px;
+  height: 0;
+}
+
+.strike-column-1 {
+  left: 18%;
+}
+
+.strike-column-2 {
+  left: 48%;
+}
+
+.strike-column-3 {
+  left: 80%;
+}
+
+.strike-diagonal-1,
+.strike-diagonal-2 {
+  width: 0;
+  height: 4px;
+}
+
+.strike-diagonal-1 {
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+.strike-row-1.strike-active,
+.strike-row-2.strike-active,
+.strike-row-3.strike-active {
+  width: 100%;
+}
+
+.strike-column-1.strike-active,
+.strike-column-2.strike-active,
+.strike-column-3.strike-active {
+  height: 100%;
+}
+
+.strike-diagonal-1.strike-active,
+.strike-diagonal-2.strike-active {
+  width: 90%;
+}
+
+.Game-over {
+  text-align: center;
+  border: bisque 3px;
+  border-style: dotted;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.reset-button {
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: bisque;
+  width: 100%;
+  border: 2px solid bisque;
+  font-size: 2em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+}
+
+/* Tic-Tac-Toe end */
+
+/* RockPaperScissor begin */
+.main-heading-rps {
+  font-size: 700%;
+  cursor: default;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+.each-gestures {
+  display: inline;
+}
+
+.gesture-image {
+  background-color: bisque;
+  border-radius: 50%;
+  padding: 10%;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.gesture-image:hover {
+  transform: scale(1.1);
+}
+
+.gesture-container {
+  margin-top: 7.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.button-box {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: inline-block;
+  padding: 1% 5% 1% 5%;
+  border-radius: 10px;
+  color: bisque;
+  margin: 2% 0% 2% 36%;
+  font-size: 200%;
+  border: 2px solid bisque;
+}
+
+.button-box:active {
+  transform: scale(0.9);
+}
+
+.comment-box {
+  background-color: rgba(0, 0, 0, 0.899);
+  padding: 1%;
+  font-size: 2.5em;
+  margin: 7.5% 2.5% 5% 2.5%;
+  border: 5px solid white;
+  border-radius: 10px;
+  text-align: center;
+}
+/* RockPaperScissor end */
